@@ -13,9 +13,10 @@ import javax.validation.constraints.Size;
 public class Address extends BaseEntity {
 
 
+    @Id
     @GeneratedValue(strategy= GenerationType.AUTO,generator="native")
     @GenericGenerator(name = "native",strategy = "native")
-    @Id
+    @Column(name = "address_id")
     private int addressId;
 
     @NotBlank(message="Address1 must not be blank")
