@@ -26,7 +26,7 @@ public class Contact extends BaseEntity {
 
     @NotBlank(message = "Mobile Number must not be blank")
     @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile mumber must be 10 digits")
-    private String mobileNum;
+    private String mobileNumber;
 
     @NotBlank(message = "Email must not be blank")
     @Email(message="Please provide a valid email address")

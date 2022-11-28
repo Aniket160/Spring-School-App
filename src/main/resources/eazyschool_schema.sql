@@ -17,8 +17,8 @@ CREATE TABLE IF NOT EXISTS `contact_msg` (
   `updated_by` varchar(50) DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `holidays` (
-  `day` varchar(20) NOT NULL,
+CREATE TABLE IF NOT `holidays` (
+  `day` varchar(20) NOT NULL PRIMARY KEY,
   `reason` varchar(100) NOT NULL,
   `type` varchar(20) NOT NULL,
   `created_at` TIMESTAMP NOT NULL,

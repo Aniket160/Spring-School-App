@@ -1,7 +1,6 @@
 package com.EazySchool1.EazySchoolSite1.model;
 
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -14,9 +13,10 @@ public class Address extends BaseEntity {
 
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO,generator="native")
-    @GenericGenerator(name = "native",strategy = "native")
-    @Column(name = "address_id")
+//    @GeneratedValue(strategy= GenerationType.AUTO,generator="native")
+//    @GenericGenerator(name = "native",strategy = "native")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int addressId;
 
     @NotBlank(message="Address1 must not be blank")

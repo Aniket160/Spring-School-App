@@ -8,7 +8,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "holidays")
 public class Holiday extends BaseEntity {
-
     @Id
     private  String day;
     private  String reason;
@@ -22,4 +21,5 @@ public class Holiday extends BaseEntity {
     {
 
     }
+
 }

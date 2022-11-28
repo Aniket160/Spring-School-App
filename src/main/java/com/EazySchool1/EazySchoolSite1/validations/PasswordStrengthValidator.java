@@ -4,6 +4,7 @@ import com.EazySchool1.EazySchoolSite1.annotations.PasswordValidator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import java.util.Arrays;
 import java.util.List;
 
 public class PasswordStrengthValidator implements
@@ -13,9 +14,7 @@ public class PasswordStrengthValidator implements
 
     @Override
     public void initialize(PasswordValidator passwordValidator) {
-        weakPasswords.add("12345");
-        weakPasswords.add("password");
-        weakPasswords.add("qwerty");
+        weakPasswords = Arrays.asList("12345", "password", "qwerty");
     }
 
     @Override

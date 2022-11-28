@@ -41,9 +41,9 @@ public class ProfileController {
             profile.setState(person.getAddress().getState());
             profile.setZipCode(person.getAddress().getZipCode());
         }
-
         ModelAndView modelAndView = new ModelAndView("profile.html");
         modelAndView.addObject("profile",profile);
+        model.addAttribute(person);
         return modelAndView;
     }
 

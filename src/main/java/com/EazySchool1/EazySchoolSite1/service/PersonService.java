@@ -24,7 +24,7 @@ public class PersonService {
     public boolean createNewPerson(Person person){
         boolean isSaved = false;
         Roles role = rolesRepository.getByRoleName(EazySchoolConstants.STUDENT_ROLE);
-      //  person.setRoles(role);
+        person.setRoles(role);
         person.setPwd(passwordEncoder.encode(person.getPwd()));// password erncrypted
         person = personRepository.save(person);
         if (null != person && person.getPersonId() > 0)

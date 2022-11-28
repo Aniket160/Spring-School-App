@@ -13,13 +13,16 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
 @Component
 public class EazySchoolUsernamePwdAuthenticationProvider implements AuthenticationProvider {
 
     @Autowired
     private PersonRepository personRepository;
 
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Override
